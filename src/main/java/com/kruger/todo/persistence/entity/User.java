@@ -2,6 +2,7 @@ package com.kruger.todo.persistence.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GenerationType;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity y
@@ -19,6 +20,8 @@ public class User {
     private String userEmail;
     @Column(name="user_password")
     private String userPassword;
+    @OneToMany(mappedBy = "user")
+    private List<Task> Tasks
 
     public Integer getUserId() {
         return userId;
