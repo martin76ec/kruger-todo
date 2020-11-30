@@ -44,6 +44,7 @@ CREATE TABLE CATEGORIES(
 CREATE TABLE CATEGORIES_TASKS(
     "category_id" INT NOT NULL,
     "task_id" INT NOT NULL,
+    PRIMARY KEY ("category_id", "task_id"),
     CONSTRAINT "fk_CATEGORIES_TASKS"
         FOREIGN KEY ("category_id")
         REFERENCES CATEGORIES ("category_id")
