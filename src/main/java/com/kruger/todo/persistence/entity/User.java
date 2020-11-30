@@ -1,8 +1,10 @@
 package com.kruger.todo.persistence.entity;
 
+import javax.persistence.Entity;
 import javax.persistence.GenerationType;
+import javax.persistence.Table;
 
-@Entity
+@Entity y
 @Table(name = "users")
 public class User {
     @Id

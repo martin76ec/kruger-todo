@@ -1,5 +1,6 @@
 package com.kruger.todo.persistence.entity;
 
+import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @Entity
@@ -15,5 +16,46 @@ public class Task {
     private boolean taskCompleted;
     @Column(name = "task_deleted")
     private boolean taskDeleted;
-    @Column()
+    @Column(name = "user_id")
+    private boolean userId;
+
+    public Integer getTaskId() {
+        return taskId;
+    }
+
+    public void setTaskId(Integer taskId) {
+        this.taskId = taskId;
+    }
+
+    public String getTaskDescription() {
+        return taskDescription;
+    }
+
+    public void setTaskDescription(String taskDescription) {
+        this.taskDescription = taskDescription;
+    }
+
+    public boolean isTaskCompleted() {
+        return taskCompleted;
+    }
+
+    public void setTaskCompleted(boolean taskCompleted) {
+        this.taskCompleted = taskCompleted;
+    }
+
+    public boolean isTaskDeleted() {
+        return taskDeleted;
+    }
+
+    public void setTaskDeleted(boolean taskDeleted) {
+        this.taskDeleted = taskDeleted;
+    }
+
+    public boolean isUserId() {
+        return userId;
+    }
+
+    public void setUserId(boolean userId) {
+        this.userId = userId;
+    }
 }
